@@ -130,3 +130,47 @@
             <li>Easy cancellations and refunds</li>
             <li>Custom travel packages</li>
         </ul>
+        <h3>Frequently Asked Questions (FAQs)</h3>
+        <p><strong>Q: How can I book a flight?</strong><br> A: Call us directly at <strong>1-828-238-7846</strong> and our agents will assist you.</p>
+        <p><strong>Q: Can I cancel my booking?</strong><br> A: Yes, cancellations are allowed based on airline policies. Contact our helpline at <strong>1-828-238-7846</strong> for assistance.</p>
+        <p><strong>Q: What payment methods do you accept?</strong><br> A: We accept all major credit cards, PayPal, and other secure payment methods.</p>
+        <p><strong>Q: How do I get a refund?</strong><br> A: Refunds depend on the airline policy. Please call us at <strong>1-828-238-7846</strong> for refund processing.</p>
+
+        <h3>Contact Us</h3>
+        <p>For more information or to make a booking over the phone, call our customer service at <strong>1-828-238-7846</strong>.</p>
+    </div>
+
+    <div class="fixed-bottom-bar">
+        <a href="tel:1-828-238-7846" id="bottomCallButton">Call Now!</a>
+    </div>
+
+    <div class="dialog-overlay" id="discountDialog">
+        <div class="dialog-content">
+            <h2>Special Offer!</h2>
+            <img src="https://marketplace.canva.com/EAGTwNmbQWs/1/0/1600w/canva-blue-flat-illustrative-travel-agency-logo-upUAI7X5cjo.jpg" alt="Airplane" style="width: 200px; height: 150px;">
+            <p>Receive up to 45% off on your flight booking with Fly to Flights!</p>
+            <a href="tel:1-828-238-7846">Call Now: 1-828-238-7846</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('bottomCallButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('discountDialog').style.display = 'flex';
+        });
+
+        document.getElementById('discountDialog').addEventListener('click', function(event) {
+            if (event.target === this) {
+                this.style.display = 'none';
+            }
+        });
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) { // Adjust scroll threshold as needed
+                document.getElementById('discountDialog').style.display = 'flex';
+            }
+        });
+
+    </script>
+</body>
+</html>
